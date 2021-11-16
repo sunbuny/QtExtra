@@ -41,6 +41,10 @@ message("=> Project : ${META_NAME_VERSION}")
 # ------------------------------------------------------------------------------
 # Project configuration options
 # ------------------------------------------------------------------------------
+# Project options
+# cmake-format: off
+option(OPTION_BUILD_EXAMPLES "Build examples."                                        OFF)
+# cmake-format: on
 
 # The default build type provided by CMake is to include no compiler flags for
 # optimization. For some projects you may want to set a default build type so
@@ -106,4 +110,7 @@ add_subdirectory(qtpropertybrowser)
 #add_subdirectory(qtsqlextra)
 #add_subdirectory(qtsqlwidgets)
 #add_subdirectory(modelexporters)
-add_subdirectory(examples)
+
+if (OPTION_BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
