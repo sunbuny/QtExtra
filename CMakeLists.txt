@@ -3,7 +3,7 @@
 # ------------------------------------------------------------------------------
 cmake_minimum_required(VERSION 3.5.0)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 # Register custom cmake commands
 find_package(Git REQUIRED)
